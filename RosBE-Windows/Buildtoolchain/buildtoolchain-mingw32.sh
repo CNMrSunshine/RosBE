@@ -243,6 +243,7 @@ if rs_prepare_module "gcc"; then
 	rs_do_command $rs_makecmd -j $rs_cpucount all-gcc
 	rs_do_command $rs_makecmd install-gcc
 	rs_do_command $rs_makecmd install-lto-plugin
+	rs_do_command $rs_makecmd install-headers
 
 	if rs_prepare_module "mingw_w64"; then
 		export AR="$rs_archprefixdir/bin/${rs_target_tool_prefix}ar"
